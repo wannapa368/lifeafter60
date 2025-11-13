@@ -1,0 +1,617 @@
+/* Global Styles */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* Navigation */
+.main-nav {
+  background-color: #4a6fa5;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-brand a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1rem;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.nav-links li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav-links li a.emergency-btn {
+  background-color: #e74c3c;
+  font-weight: bold;
+}
+
+.nav-links li a.emergency-btn:hover {
+  background-color: #c0392b;
+}
+
+/* Language Switcher */
+.language-switcher {
+  display: flex;
+  align-items: center;
+}
+
+.language-btn {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.language-btn:hover {
+  background-color: #2980b9;
+}
+
+/* Page Header */
+.page-header {
+  background-color: #4a6fa5;
+  color: white;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 0 0 8px 8px;
+}
+
+.page-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.page-header p {
+  margin: 0.5rem 0 0;
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #4a6fa5;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+  margin-top: 1rem;
+}
+
+.btn:hover {
+  background-color: #3a5a80;
+}
+
+.btn.primary {
+  background-color: #4a6fa5;
+}
+
+.btn.secondary {
+  background-color: #6c757d;
+}
+
+.btn.emergency-btn {
+  background-color: #e74c3c;
+  color: white;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+}
+
+.btn.emergency-btn:hover {
+  background-color: #c0392b;
+}
+
+.btn.emergency-btn.large {
+  padding: 1.5rem 3rem;
+  font-size: 1.3rem;
+}
+
+.btn.disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+/* Feature Cards */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 0 2rem 2rem;
+}
+
+.feature-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.feature-card h3 {
+  color: #4a6fa5;
+  margin-top: 0;
+}
+
+.feature-card p {
+  color: #555;
+}
+
+/* Home Page */
+.hero {
+  background-color: #e8f4f8;
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 0 2rem 2rem;
+}
+
+.hero h2 {
+  color: #2c3e50;
+  margin-top: 0;
+}
+
+.hero p {
+  color: #34495e;
+  font-size: 1.1rem;
+}
+
+/* Healthcare Page */
+.health-topics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 0 2rem 2rem;
+}
+
+.topic-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.topic-card h2 {
+  color: #4a6fa5;
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+.topic-description {
+  color: #555;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.tips-list {
+  text-align: left;
+  padding-left: 1.5rem;
+}
+
+.tips-list li {
+  margin-bottom: 0.5rem;
+}
+
+.additional-resources {
+  background-color: #f1f8e9;
+  padding: 2rem;
+  margin: 0 2rem 2rem;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.additional-resources h2 {
+  color: #4a6fa5;
+  margin-top: 0;
+}
+
+.additional-resources ul {
+  padding-left: 1.5rem;
+}
+
+.additional-resources a {
+  color: #4a6fa5;
+  text-decoration: none;
+}
+
+.additional-resources a:hover {
+  text-decoration: underline;
+}
+
+/* Emergency Contacts Page */
+.contact-section {
+  margin-bottom: 2rem;
+  padding: 0 2rem;
+}
+
+.contact-section h2 {
+  color: #4a6fa5;
+  text-align: left;
+}
+
+.contacts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.contact-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.contact-card h3 {
+  color: #4a6fa5;
+  margin-top: 0;
+}
+
+.contact-number {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #e74c3c;
+  margin: 0.5rem 0;
+}
+
+.contact-description {
+  color: #555;
+}
+
+.quick-dial {
+  background-color: #ffebee;
+  padding: 2rem;
+  margin: 0 2rem 2rem;
+  border-radius: 8px;
+  border-left: 5px solid #e74c3c;
+}
+
+.quick-dial h3 {
+  color: #e74c3c;
+  margin-top: 0;
+}
+
+/* Local Services Page */
+.services-search {
+  padding: 0 2rem 2rem;
+}
+
+.search-box {
+  display: flex;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px 0 0 4px;
+  font-size: 1rem;
+}
+
+.search-box button {
+  padding: 0.75rem 1.5rem;
+  background-color: #4a6fa5;
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+.services-directory {
+  padding: 0 2rem 2rem;
+}
+
+.services-directory h2 {
+  color: #4a6fa5;
+  text-align: left;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.service-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.service-card h3 {
+  color: #4a6fa5;
+  margin-top: 0;
+}
+
+.service-description {
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.service-details p {
+  margin: 0.25rem 0;
+}
+
+/* Emergency Alert Page */
+.alert-form {
+  padding: 0 2rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.alert-instructions {
+  background-color: #fff3cd;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.alert-instructions h2 {
+  color: #4a6fa5;
+  margin-top: 0;
+}
+
+.alert-instructions ol {
+  padding-left: 1.5rem;
+}
+
+.alert-instructions li {
+  margin-bottom: 0.75rem;
+}
+
+.alert-controls {
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.alert-controls h2 {
+  color: #4a6fa5;
+  margin-top: 0;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  padding: 2rem;
+  margin: 0 2rem 2rem;
+  border-radius: 8px;
+  border: 1px solid #c3e6cb;
+}
+
+.alert-success h2 {
+  color: #155724;
+  margin-top: 0;
+}
+
+.sending-indicator {
+  margin-top: 1rem;
+  text-align: center;
+  color: #6c757d;
+}
+
+/* Volunteer Finder Page */
+.search-section {
+  padding: 0 2rem 2rem;
+}
+
+.volunteers-directory {
+  padding: 0 2rem 2rem;
+}
+
+.volunteers-directory h2 {
+  color: #4a6fa5;
+  text-align: left;
+}
+
+.volunteers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.volunteer-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.volunteer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.volunteer-header h3 {
+  color: #4a6fa5;
+  margin: 0;
+}
+
+.distance {
+  background-color: #e8f4f8;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+}
+
+.volunteer-rating {
+  margin-bottom: 1rem;
+}
+
+.stars {
+  color: #f39c12;
+  margin-right: 0.5rem;
+}
+
+.rating-value {
+  color: #6c757d;
+}
+
+.volunteer-services h4 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.volunteer-services ul {
+  padding-left: 1.5rem;
+  margin-top: 0;
+}
+
+.volunteer-services li {
+  margin-bottom: 0.25rem;
+}
+
+.become-volunteer {
+  background-color: #e8f4f8;
+  padding: 2rem;
+  margin: 0 2rem 2rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.become-volunteer h3 {
+  color: #4a6fa5;
+  margin-top: 0;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  border-top: 1px solid #eee;
+  color: #666;
+  margin-top: 2rem;
+}
+
+/* Back Link */
+.back-link {
+  padding: 0 2rem 2rem;
+  text-align: left;
+}
+
+.back-link a {
+  color: #4a6fa5;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.back-link a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .page-header h1 {
+    font-size: 2rem;
+  }
+  
+  .hero, .additional-resources, .quick-dial, .alert-success {
+    padding: 1.5rem;
+    margin: 0 1rem 1.5rem;
+  }
+  
+  .features, .health-topics, .contact-section, .services-search, 
+  .services-directory, .alert-form, .search-section, .volunteers-directory,
+  .become-volunteer, .back-link {
+    padding: 0 1rem 1.5rem;
+  }
+  
+  .search-box {
+    flex-direction: column;
+  }
+  
+  .search-box input {
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .search-box button {
+    border-radius: 4px;
+  }
+}
